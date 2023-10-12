@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Post } from '../models/post.model';
+import { Observable } from 'rxjs';
+import { Post } from '../../models/post.model';
 
 @Injectable({
   providedIn: 'root',
@@ -8,7 +9,7 @@ import { Post } from '../models/post.model';
 export class PostsService {
   constructor(private http: HttpClient) {}
 
-  getPosts() {
+  getPosts(): Observable<Post[]> {
     return this.http.get<Post[]>('/assets/posts.json');
   }
 }

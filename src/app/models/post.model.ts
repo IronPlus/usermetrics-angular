@@ -6,3 +6,9 @@ export interface Post {
   type: string;
   created_time: string;
 }
+
+export interface UserPosts {
+  user_id: string;
+  name: string;
+  posts: Post[];
+}
