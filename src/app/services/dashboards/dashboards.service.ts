@@ -38,12 +38,6 @@ export class DashboardsService {
     );
   }
 
-  /**
-   * Returns array of dashboards for a given array of userPosts.
-   *
-   * @param userPostsArray Array of userPosts object.
-   * @returns Array of dashboards.
-   */
   createDashboards(userPostsArray: UserPosts[]): Dashboard[] {
     const dashboards: Dashboard[] = [];
 
@@ -61,12 +55,6 @@ export class DashboardsService {
     return dashboards;
   }
 
-  /**
-   * Returns median number of charactes for a given user posts.
-   *
-   * @param userPosts userPosts object.
-   * @returns median.
-   */
   findMedian(userPosts: UserPosts): number {
     let lengths: number[] = [];
 
@@ -83,12 +71,6 @@ export class DashboardsService {
       : lengths[mid];
   }
 
-  /**
-   * Returns number of posts each person made each month for a given userPosts object.
-   *
-   * @param userPosts userPosts object.
-   * @returns number of posts each person made every month.
-   */
   createMonthlyPostsStatistics(userPosts: UserPosts): number[] {
     const statistics = new Array(12).fill(0);
 
@@ -99,12 +81,6 @@ export class DashboardsService {
     return statistics;
   }
 
-  /**
-   * Returns the longest post from a userPosts object.
-   *
-   * @param userPosts userPosts object.
-   * @returns the longest post.
-   */
   findLongestPost(userPosts: UserPosts): string {
     const lengths: number[] = [];
 
