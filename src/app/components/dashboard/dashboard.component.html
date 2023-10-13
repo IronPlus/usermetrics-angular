@@ -1,0 +1,19 @@
+<h3>{{ dashboard.name }}</h3>
+<p>
+  <strong>The total number of posts made: </strong>
+  {{ dashboard.total_posts }}
+</p>
+<p>
+  <strong>The median number of characters of posts: </strong>
+  {{ dashboard.median_num_of_chars }}
+</p>
+<div>
+  <strong>The graph illustrating the monthly post count:</strong>
+  <app-monthly-posts-chart
+    [monthlyPostsStatistics]="dashboard.monthly_posts_statistics"
+  ></app-monthly-posts-chart>
+</div>
+<p>
+  <strong>The longest post: </strong>
+  {{ dashboard.longest_post }}
+</p>

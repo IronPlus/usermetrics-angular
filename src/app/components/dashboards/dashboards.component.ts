@@ -11,9 +11,9 @@ import { DashboardsService } from 'src/app/services/dashboards/dashboards.servic
 export class DashboardsComponent implements OnInit {
   dashboards!: Observable<Dashboard[]>;
 
-constructor(private dashboardService: DashboardsService) {}
+  constructor(private dashboardService: DashboardsService) {}
 
   ngOnInit(): void {
-      this.dashboards = this.dashboardService.getDashBoards();
+    this.dashboards = this.dashboardService.getDashBoards();
   }
 }
