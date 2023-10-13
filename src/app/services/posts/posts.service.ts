@@ -10,6 +10,6 @@ export class PostsService {
   constructor(private http: HttpClient) {}
 
   getPosts(): Observable<Post[]> {
-    return this.http.get<Post[]>('/assets/posts.json');
+    return this.http.get<Post[]>('/assets/posts.json'); // todo: move url to a config file
   }
 }
