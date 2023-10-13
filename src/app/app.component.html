@@ -1,5 +1,11 @@
-<div>header</div>
-<div class="app-component">
+<mat-toolbar color="primary">
+  <span>Usermetrics</span>
+  <span class="spacer"></span>
+  <button mat-button routerLink="/posts">Posts</button>
+  <button mat-button routerLink="/dashboards">Dashboards</button>
+</mat-toolbar>
+
+<div class="main-content">
   <div class="container">
     <router-outlet></router-outlet>
   </div>
