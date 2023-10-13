@@ -1,4 +1,4 @@
 <h1>Dashboards:</h1>
-<div *ngFor="let dashboard of dashboards | async">
-  <span>{{ dashboard | json }}</span>
-</div>
+<mat-card class="dashboard" *ngFor="let dashboard of dashboards | async">
+  <mat-card-content>{{ dashboard | json }}</mat-card-content>
+</mat-card>
