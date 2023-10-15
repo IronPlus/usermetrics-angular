@@ -23,5 +23,6 @@ export class PostsComponent implements OnInit {
     console.log(pe.length);
     console.log(pe.pageIndex);
     console.log(pe.pageSize);
+    console.log(pe.previousPageIndex);
   }
 }
