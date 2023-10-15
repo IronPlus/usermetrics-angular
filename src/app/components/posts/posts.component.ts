@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PageEvent } from '@angular/material/paginator';
 
 import { Observable } from 'rxjs';
 import { Post } from 'src/app/models/post.model';
@@ -16,5 +17,11 @@ export class PostsComponent implements OnInit {
 
   ngOnInit(): void {
     this.posts = this.postsService.getPosts();
+  }
+
+  onChangePage(pe: PageEvent) {
+    console.log(pe.length);
+    console.log(pe.pageIndex);
+    console.log(pe.pageSize);
   }
 }
