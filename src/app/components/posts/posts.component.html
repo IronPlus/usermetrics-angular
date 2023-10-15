@@ -1,18 +1,28 @@
 <h1>Posts:</h1>
-
-<mat-card class="post" *ngFor="let post of posts | async">
-  <mat-card-content>
-    <p>
-      <strong>Name: </strong>
-      {{ post.from_name }}
-    </p>
-    <p>
-      <strong>Message: </strong>
-      {{ post.message }}
-    </p>
-    <p>
-      <strong>Time: </strong>
-      {{ post.created_time }}
-    </p>
-  </mat-card-content>
-</mat-card>
+<mat-paginator
+  class="paginator"
+  [length]="totalPosts"
+  [pageSize]="pageSize"
+  [pageSizeOptions]="pageSizeOptions"
+  (page)="onChangePage($event)"
+  showFirstLastButtons
+>
+</mat-paginator>
+<div>
+  <mat-card class="post" *ngFor="let post of pagedPosts$ | async">
+    <mat-card-content>
+      <p>
+        <strong>Name: </strong>
+        {{ post.from_name }}
+      </p>
+      <p>
+        <strong>Message: </strong>
+        {{ post.message }}
+      </p>
+      <p>
+        <strong>Time: </strong>
+        {{ post.created_time }}
+      </p>
+    </mat-card-content>
+  </mat-card>
+</div>
