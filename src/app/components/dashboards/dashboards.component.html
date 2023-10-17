@@ -1,5 +1,8 @@
 <h1>Dashboards:</h1>
 <mat-card class="dashboard" *ngFor="let dashboard of dashboards | async">
+  <mat-card-header class="card-header">
+    <mat-card-title>{{ dashboard.name }}</mat-card-title>
+  </mat-card-header>
   <mat-card-content>
     <app-dashboard [dashboard]="dashboard"></app-dashboard>
   </mat-card-content>
