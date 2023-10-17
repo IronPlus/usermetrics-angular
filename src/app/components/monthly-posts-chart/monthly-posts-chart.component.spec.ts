@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { NgChartsModule } from 'ng2-charts';
 import { MonthlyPostsChartComponent } from './monthly-posts-chart.component';
 
 describe('MonthlyPostsChartComponent', () => {
@@ -8,8 +9,10 @@ describe('MonthlyPostsChartComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [MonthlyPostsChartComponent]
+      imports: [NgChartsModule],
+      declarations: [MonthlyPostsChartComponent],
     });
+    
     fixture = TestBed.createComponent(MonthlyPostsChartComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
