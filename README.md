@@ -2,6 +2,14 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.6.
 
+This project displays users social media posts in a paginated format. It also has dashboards for displaying users monlthly posts metrics.
+
+It is assumed that the user is already authenticated / logged in. The user authentication flow is yet to be implemented.
+
+## AWS deployment
+
+This project has been deplyed in AWS CloudFront. Visit: https://d18sffqk4f2o6k.cloudfront.net
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
@@ -30,3 +38,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 - Add unit tests
 - Add e2e tests
+- Add user authentication flow
