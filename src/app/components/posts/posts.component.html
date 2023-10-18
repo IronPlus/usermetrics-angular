@@ -21,7 +21,7 @@
       </p>
       <p>
         <strong>Time: </strong>
-        {{ post.created_time }}
+        {{ post.created_time | date : "dd.MM.yyyy HH:mm" }}
       </p>
     </mat-card-content>
   </mat-card>
