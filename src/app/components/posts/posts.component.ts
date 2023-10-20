@@ -22,13 +22,13 @@ export class PostsComponent implements OnInit {
     this.posts$ = this.postsService.getPosts().pipe(
       shareReplay(1) // Prevent multiple executions
     );
-
-    this.posts$.subscribe((posts) => (this.totalPosts = posts.length));
   }
 
   get pagedPosts$(): Observable<Post[]> {
     return this.posts$.pipe(
       map((posts) => {
+        this.totalPosts = posts.length;
+
         const startIndex = (this.currentPage - 1) * this.pageSize;
         const endIndex = startIndex + this.pageSize;
 
