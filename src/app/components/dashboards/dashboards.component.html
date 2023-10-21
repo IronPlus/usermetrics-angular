@@ -1,9 +1,25 @@
-<h1>Dashboards:</h1>
-<mat-card class="dashboard" *ngFor="let dashboard of dashboards | async">
-  <mat-card-header class="card-header">
-    <mat-card-title>{{ dashboard.name }}</mat-card-title>
-  </mat-card-header>
-  <mat-card-content>
-    <app-dashboard [dashboard]="dashboard"></app-dashboard>
-  </mat-card-content>
-</mat-card>
+<ng-container *ngIf="dashboards$ | async as dashboards; else spinnerOrError">
+  <h1>Dashboards:</h1>
+  <mat-card class="dashboard" *ngFor="let dashboard of dashboards">
+    <mat-card-header class="card-header">
+      <mat-card-title>{{ dashboard.name }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <app-dashboard [dashboard]="dashboard"></app-dashboard>
+    </mat-card-content>
+  </mat-card>
+</ng-container>
+
+<ng-template #spinnerOrError>
+  <ng-container *ngIf="errorMessage; else spinner">
+    <mat-card class="error-message-card">
+      <mat-card-content>{{ errorMessage }}</mat-card-content>
+      <mat-card-actions align="end">
+        <button mat-button routerLink="/dashboards">Retry</button>
+      </mat-card-actions>
+    </mat-card>
+  </ng-container>
+  <ng-template #spinner>
+    <mat-spinner class="spinner"></mat-spinner>
+  </ng-template>
+</ng-template>

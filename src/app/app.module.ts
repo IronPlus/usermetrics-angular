@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -31,6 +32,7 @@ import { PostsComponent } from './components/posts/posts.component';
     MatToolbarModule,
     MatButtonModule,
     MatPaginatorModule,
+    MatProgressSpinnerModule,
     NgChartsModule,
   ],
   providers: [],
