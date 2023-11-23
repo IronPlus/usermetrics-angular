@@ -8,7 +8,7 @@ It is assumed that the user is already authenticated / logged in. The user authe
 
 ## AWS deployment
 
-This project has been deplyed in AWS CloudFront. Visit: https://d18sffqk4f2o6k.cloudfront.net
+This project has been deplyed in AWS Amplify. Visit: https://master.d2jzd67wnq2k8c.amplifyapp.com
 
 ## Development server
 
